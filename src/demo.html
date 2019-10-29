@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+</head>
+
+<body>
+
+
+    <script>
+        var timer = setInterval(function () {
+            var setTime = new Date('2020/1/1 00:00:00').getTime();
+            var nowTime = new Date().getTime();
+            var resTime = setTime - nowTime;
+            resTime--;
+            var d = Math.floor(resTime / (86400 * 1000));
+            var h = Math.floor(resTime / (3600 * 1000) % 24);
+            var m = Math.floor(resTime / (60 * 1000) % 60);
+            var s = Math.floor(resTime / 1000 % 60);
+            d = d < 10 ? '0' + d : d;
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            console.log('2019年还剩' + d + '天' + h + '时' + m + '分' + s + '秒');
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
